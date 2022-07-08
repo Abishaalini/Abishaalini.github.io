@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/27830c2f99.js" crossorigin="anonymous"></script>
     
     <title>Password Generator</title>
 </head>
 <body>
     <header>
-        <img class="logo" src="images/logo.png" alt="logo">
+        <i id="logo" class="fa fa-user-secret fa-2x" aria-hidden="true"></i>
         <nav>
             <ul class="ul-el">
                 <li><a href="#">Services</a></li>
@@ -30,23 +31,43 @@
                 </div>
                 <button onclick="generate()">Generate Passwords</button>
 
-                <img src ="images/secureimage.svg" width="400" height="400" style="margin-top:70px ;margin-left:120px ;"/>
+                <div class="slide-el">
+                    <img id="img-el"src ="images/secureimage2.svg" width="400" height="400" style="margin-top:70px ;margin-left:120px ;"/>
+                    <img id="img-el"src ="images/secureimage.svg" width="400" height="400" style="margin-top:70px ;margin-left:120px ;"/>
+                    <img id="img-el"src ="images/secureimage2.svg" width="400" height="400" style="margin-top:70px ;margin-left:120px ;"/>
+                    
+                </div>
 <hr>
                 <div class="field">
                     <p id="passwordOne-el">nfJjy!dDvR&ial</p>
-                    <img id="copy-el1" src="images/copy.png" style="right:0px;position: absolute;cursor: pointer;">
+                    <i id="copy-el1" class="fa fa-clone" aria-hidden="true"></i>
+                     <!-- <div id="copy-el1" style="right:0px;position: absolute;cursor: pointer;"></div> -->
 
                 </div>
                 <div class="field2">
-                    <p id="passwordTwo-el">egxWij@veiPUwK </p> 
-                    <img id="copy-el2" src="images/copy.png" style="right:0px;position: absolute;cursor: pointer;">
+                    <p id="passwordTwo-el">egxWij@veiPUwK</p> 
+                    <i id="copy-el2" class="fa fa-clone" aria-hidden="true" ></i>
+                     <!-- <div id="copy-el2" style="right:0px;position: absolute;cursor: pointer;"> </div> -->
                 </div>
-                
                 
             </div>
         </div>
     </section>
-    <script src="index.js"></script>
-    <!-- <h6 style="display:block ; bottom:0px;position:absolute;left: 650px;">2022@copyright</h6> -->
+   
+    <section class="footer">
+        <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    
+        <p class="copyright">Abishaalini@2022</p>
+    </section>
+    <script src="index.js">
+       
+    </script>
+    <script> autoSlider()
+    </script>
 </body>
 </html>

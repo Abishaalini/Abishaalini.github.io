@@ -36,3 +36,20 @@ copyEl2.onclick = function(){
     let content= passwordTwoEl.innerText
     navigator.clipboard.writeText(content);
 }
+
+
+
+var index=0
+
+function autoSlider(){
+    setTimeout(autoSlider,3000)
+ const slideEl=document.querySelectorAll("img")
+ for(let i=0; i<slideEl.length; i++){
+    slideEl[i].style.display="none"
+ }
+index++
+if(index>slideEl.length){
+    index=1
+}
+slideEl[index-1].style.display="block"
+}
