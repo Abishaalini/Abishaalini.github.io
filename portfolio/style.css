@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -5,11 +6,13 @@
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
+    font-family: 'Oswald', sans-serif;
 }
 
 body{
     background: #fff;
     color: darkblue;
+    font-family: 'Oswald', sans-serif;
 }
 
 header{
@@ -24,6 +27,12 @@ header{
     background: transparent;
     padding: 30px 18%;
     transition: 0.3s;
+}
+
+header.sticky{
+    background: rgba(225, 220, 220, 0.999);
+    padding: 10px 18%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 }
 .navlist{
     display: flex;
@@ -41,6 +50,7 @@ header{
 section{
     padding: 100px 18%;
 }
+
 .home{
     min-height: 100vh;
     height: 100%;
@@ -100,9 +110,13 @@ section{
 }
 .home-img{
     position: relative;
+    padding-left: 20px;
 }
 .home-img img{
-    border-radius: 100%;
+    max-width: 100%;
+    width:200px;
+    height: auto;
+    border-radius: 50%;
 }
 .box .circle{
     position: absolute;
@@ -122,20 +136,20 @@ section{
 }
 .box .circle:nth-child(1){
     top: -50px;
-    right: 100px;
+    right: 140px;
     width: 100px;
     height: 100px;
 }
 .box .circle:nth-child(2){
     top: 25px;
-    right: 250px;
-    width: 46px;
-    height: 46px;
+    right: 330px;
+    width: 55px;
+    height: 55px;
     z-index: 2;
 }
 .box .circle:nth-child(3){
     top: 50px;
-    right: 160px;
+    right: 215px;
     width: 80px;
     height:80px;
     
@@ -148,7 +162,7 @@ section{
     background: rgba(255, 0, 21, 0.374);
 }
 .box .circle:nth-child(5){
-    top: 200px;
+    top: 150px;
     right: 250px;
     width: 50px;
     height:50px;
@@ -185,3 +199,137 @@ section{
     z-index: 1;
     opacity: 0.3;
 } */
+.Portfolio{
+    background:#f4f2f1;
+}
+.PortfolioHeading{
+    text-align: center;
+}
+.PortfolioHeading h3{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 7px 0px 20px;
+    line-height: 1.1;
+}
+.PortfolioHeading h4{
+    color: darkblue;
+    font-size: 20px;
+    font-weight: 500;
+}
+.PortfolioHeading p{
+    font-size: 15px;
+    color: darkblue;
+    line-height: 28px;
+}
+.portfolio-content{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(450px, auto));
+   grid-gap: 2rem;
+   align-items: center;
+   margin-top: 5rem;
+   text-align: center;
+   cursor: pointer;
+}
+.col{
+    position: relative;
+}
+
+.col img{
+    max-width: 100%;
+    width: 900px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    transition: all .40s;
+}
+.layer:hover{
+    background: linear-gradient(rgba(255, 255, 255, 0.5) 0%, #fedcd4);
+}
+
+.layer h3{
+    position: absolute;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .40s;
+}
+
+.layer:hover h3{
+    bottom: 52%;
+    opacity: 1;
+}
+.layer h5{
+    position: absolute;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .40s;
+}
+
+.layer:hover h5{
+    bottom: 45%;
+    opacity: 1;
+}
+@media (max-width: 1425px){
+    header{
+        padding: 16px 3%;
+        transition: .3s;
+    }
+    header.sticky{
+        padding: 10px 3%;
+        transition: .3s;
+    }
+    section{
+        padding: 70px 15%;
+        transition: .3s;
+    }
+    .home-img img{
+        position:static;
+
+    }
+
+}
+
+@media(max-width: 800px){
+    .home{
+        grid-template-columns: 1fr;
+        min-height: 130vh;
+        grid-gap: 1rem;
+    }
+    .home-text{
+        padding-top: 55px;
+        text-align: center;
+    }
+    .home-img{
+        text-align: center;
+    }
+    .box{
+       top: 10px;
+    }
+    .box .circle{
+        background-color: rgba(255, 0, 13, 0.694);
+    }
+    .portfolio-content{
+        grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    
+     }
+}
