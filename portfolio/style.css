@@ -500,4 +500,12 @@ footer .wave#wave4{
         width: 300px;
         
      }
+     .layer h3,.layer h5,.layer a{
+        width: 75%;
+        font-size: 10px;
+     }
+     .layer:hover h3,.layer:hover h5,.layer:hover a{
+        width: 75%;
+        font-size: 10px;
+     }
 }
