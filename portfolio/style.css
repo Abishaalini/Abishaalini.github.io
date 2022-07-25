@@ -465,6 +465,9 @@ footer .wave#wave4{
         position:static;
 
     }
+    .portfolio-content{
+        grid-template-columns: repeat(auto-fit, minmax(650px, auto));
+     }
 
 }
 
@@ -507,5 +510,12 @@ footer .wave#wave4{
      .layer:hover h3,.layer:hover h5,.layer:hover a{
         width: 75%;
         font-size: 10px;
+     }
+}
+
+@media (max-width: 400px){
+    .portfolio-content{
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    
      }
 }
